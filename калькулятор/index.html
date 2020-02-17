@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+  <div class="elem input">
+    <form> <input name='textview' type="text"></form>
+  </div>
+  <div class="elem delete" onclick ="clean()">C</div>
+  <div class="elem back" onclick ="inser('back')">back</div>
+  <div class="elem" onclick ="inser('+')">+</div>
+  <div class="elem" onclick ="inser('-')">-</div>
+  <div class="elem" onclick ="inser('*')">*</div>
+  <div class="elem" onclick ="inser('/')">/</div>
+  <div class="elem" onclick ="inser('7')">7</div>
+  <div class="elem" onclick ="inser('8')">8</div>
+  <div class="elem" onclick ="inser('9')">9</div>
+  <div class="elem" onclick ="inser('(')">(</div>
+  <div class="elem" onclick ="inser('4')">4</div>
+  <div class="elem" onclick ="inser('5')">5</div>
+  <div class="elem" onclick ="inser('6')">6</div>
+  <div class="elem" onclick ="inser(')')">)</div>
+  <div class="elem" onclick ="inser('1')">1</div>
+  <div class="elem" onclick ="inser('2')">2</div>
+  <div class="elem" onclick ="inser('3')">3</div>
+  <div class="elem q" onclick ="equal()">=</div>
+  <div class="elem zero" onclick ="clean()">0</div>
+  <div class="elem" onclick ="inser('.')">.</div>
+</div>
+	<script>
+		function inser(num){
+document.form.textview.value =document.form.textview.value + num;
+}
+function clean(){
+document.form.textview.value='';
+}
+function back(){
+let exp= document.form.textview.value;
+document.form.textview.value = exp.substring(0,exp.length-1);
+}
+function equal(){
+let a=document.form.textview.value;
+if(a) {
+document.form.textview.value= eval(a);
+}
+}
+	</script>
+</body>
+</html>
