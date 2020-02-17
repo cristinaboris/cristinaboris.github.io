@@ -1,2 +1,2 @@
-# cristinaboris.github.io
+# Калькулятор
 My first calculator
